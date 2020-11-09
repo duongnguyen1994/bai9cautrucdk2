@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập thao tác sự kiện chuột</title>
+</head>
+<body>
+    <form action="">
+        <img src="resource\bong.JPG" alt="" id = 'myimg'>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="3"><button type="button" onclick="moveup()"><img src="resource\up.png" alt="" width="20px"></button></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <button type="button" onclick="moveleft()"><img src="resource\left.png" alt="" width="20px"></button>
+                    </td>
+                    <td>
+                        <button type="button" onclick="movedown()"><img src="resource\down.png" alt="" width="20px"></button>
+                    </td>
+                    <td>
+                        <button type="button" onclick="moveright()"><img src="resource\right.png" alt="" width="20px"></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <script>
+        let imgobj = null;
+        imgObj = document.getElementById('myimg');
+        function init() {
+            imgobj = document.getElementById('myimg');
+            imgobj.style.position = 'relative';
+            imgobj.style.left = '0px';
+            imgobj.style.top = '0px';
+        }
+        function moveright() {
+            imgobj.style.left = parseInt(imgobj.style.left) + 10 + 'px';
+        }
+        function moveleft(){
+            imgobj.style.left = parseInt(imgobj.style.left) - 10 + 'px'
+        }
+        function moveup(){
+            imgobj.style.top = parseInt(imgobj.style.top) - 10 + 'px'
+        }
+        function movedown(){
+            imgobj.style.top = parseInt(imgobj.style.top) + 10 + 'px'
+        }
+        window.onload = init;
+    </script>
+</body>
+</html>
