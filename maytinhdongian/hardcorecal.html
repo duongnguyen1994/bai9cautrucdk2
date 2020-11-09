@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy tính cực kì đơn giản</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="">
+        <table>
+            <thead>
+                <tr>
+                    <caption class = title >Calculator</caption> 
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="4">
+                        <input class="size" type="text" id="result">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" value="1" onclick="val('1')">1</button>
+                    </td>
+                    <td>
+                        <button type="button" value="2" onclick="val('2')">2</button>
+                    </td>
+                    <td>
+                        <button type="button" value="3" onclick="val('3')">3</button>
+                    </td>
+                    <td>
+                        <button type="button" value="+" onclick="val('+')">+</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" value="4" onclick="val('4')">4</button>
+                    </td>
+                    <td>
+                        <button type="button" value="5" onclick="val('5')">5</button>
+                    </td>
+                    <td>
+                        <button type="button" value="6" onclick="val('6')">6</button>
+                    </td>
+                    <td>
+                        <button type="button" value="-" onclick="val('-')">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" value="7" onclick="val('7')">7</button>
+                    </td>
+                    <td>
+                        <button type="button" value="8" onclick="val('8')">8</button>
+                    </td>
+                    <td>
+                        <button type="button" value="9" onclick="val('9')">9</button>
+                    </td>
+                    <td>
+                        <button type="button" value="*" onclick="val('*')">x</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" value="clear" onclick="clr()">C</button>
+                    </td>
+                    <td>
+                        <button type="button" value="0" onclick="val('0')">0</button>
+                    </td>
+                    <td>
+                        <button type="button" value="is" onclick="solve()">=</button>
+                    </td>
+                    <td>
+                        <button type="button" value="/" onclick="val('/')">/</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+<script src="scriptofcal.js"> </script>
+</body>
+</html>
