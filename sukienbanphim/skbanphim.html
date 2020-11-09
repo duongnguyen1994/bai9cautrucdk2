@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự kiện bàn phím</title>
+</head>
+<body onload="doready()">
+    <img id="nobita" src="resource\nobita.png" alt="" style="position:absolute;left:0; top:0;" height="250" width="100">
+    <script>
+        function pressupkey(){
+            let element = document.getElementById('nobita');
+            element.style.top = parseInt(element.style.top) - 5 + 'px';
+        }
+        function pressdownkey(){
+            let element = document.getElementById('nobita');
+            element.style.top = parseInt(element.style.top) + 5 + 'px';
+        }
+        function pressleftkey(){
+            let element = document.getElementById('nobita');
+            element.style.left = parseInt(element.style.left) - 5 + 'px';
+        }
+        function pressrightkey(){
+            let element = document.getElementById('nobita');
+            element.style.left = parseInt(element.style.left) + 5 + 'px';
+        }
+        function moveselection(evt){
+            switch (evt.keyCode){
+                case 37:
+                case 65:
+                pressleftkey()
+                break
+                case 38:
+                case 87:
+                pressupkey()
+                break
+                case 39:
+                case 68:
+                pressrightkey()
+                break
+                case 40:
+                case 83:
+                pressdownkey()
+                break
+            }
+        }
+        function doready(){
+            window.addEventListener('keydown', moveselection)
+        }
+    </script>
+</body>
+</html>
