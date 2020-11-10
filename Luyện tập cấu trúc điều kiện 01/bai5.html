@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5</title>
+</head>
+<body>
+    <script>
+        let ktr = parseFloat(prompt('Nhập điểm kiểm tra'))
+        let thi = parseFloat(prompt('Nhập điểm thi'))
+        let cuoiki = parseFloat(prompt('Nhập điểm cuối kì'))
+        let tb = (ktr + thi * 2 + cuoiki * 3) / 6
+        if (tb > 10 && tb < 0){
+            alert('invalid')
+        } else if (tb >= 9){
+            alert('Xuất sắc')
+        } else if (tb >=8){
+            alert('Giỏi')
+        } else if (tb >=7){
+            alert('Khá')
+        } else if (tb >=5){
+            alert('Trung bình')
+        } else alert('Yếu')
+    </script>
+</body>
+</html>

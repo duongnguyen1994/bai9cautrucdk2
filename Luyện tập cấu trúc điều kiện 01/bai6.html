@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6</title>
+</head>
+<body>
+    <script>
+        /* Doanh số < 10000000 thì không tính hoa hồng
+        Doanh số từ 10000000 đến dưới 15000000 thì 5% hoa hồng
+        Doanh số từ 15000000 đến dưới 20000000 thì 6% hoa hồng
+        Doanh số từ 20000000 đến dưới 25000000 thì 8% hoa hồng
+        Doanh số từ 25000000 trở lên thì 10% hoa hồng*/
+    let ds = parseFloat(prompt('Nhập doanh số tháng này của nhân viên'))
+    if (ds < 10000000){
+        alert('Không nhận được hoa hồng')
+    } else if (ds < 15000000){
+        alert('Hoa hồng tháng này của bạn là : ' + ds * 0.05)
+    } else if (ds < 20000000){
+        alert('Hoa hồng tháng này của bạn là : ' + ds * 0.06)
+    } else if (ds < 25000000){
+        alert('Hoa hồng tháng này của bạn là : ' + ds * 0.08)
+    } else alert('Hoa hồng tháng này của bạn là : ' + ds * 0.1)
+    </script>
+</body>
+</html>

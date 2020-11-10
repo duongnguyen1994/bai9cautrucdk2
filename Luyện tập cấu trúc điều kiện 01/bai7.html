@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 7</title>
+</head>
+<body>
+    <script>
+        /* Từ 1 đến 10 phút đầu 1000đ/phút
+        5 phút tiếp theo 1500đ/phút
+        5 phút tiếp theo 2000đ/phút
+        từ phút 21 trở đi tính mức giá 2500đ/phút */
+        let minute = parseFloat(prompt('Nhập số phút đã gọi'));
+        if (minute < 10){
+            alert('Giá cước điện thoại của bạn là : ' + minute * 1000)
+        } else if (minute <=15){
+            alert('Giá cước điện thoại của bạn là : ' + (10000 + (minute -10) * 1500))
+        } else if (minute <= 20){
+            alert('Giá cước điện thoại của bạn là : ' + (17500 + (minute - 15) * 2000))
+        } else alert('Giá cước điện thoại của bạn là : ' + (20000 + (minute - 20) * 2500))
+    </script>
+</body>
+</html>
