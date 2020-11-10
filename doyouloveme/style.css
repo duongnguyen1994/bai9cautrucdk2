@@ -1,0 +1,18 @@
+.title {
+    position:absolute;
+    left:220px; 
+    top:175px;
+}
+.yes {
+    position:absolute; 
+    left:285px; 
+    top:235px;
+}
+.no {
+    position:absolute; 
+    left:360px; 
+    top:235px;
+}
+body{
+    display: block;
+}
