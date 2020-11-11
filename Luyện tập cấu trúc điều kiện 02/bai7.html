@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 7</title>
+</head>
+<body>
+    <script>
+        // phương trình bậc 2: ax2 + bx + c =0
+        let a = parseFloat(prompt('Nhập vào giá trị a'));
+        let b = parseFloat(prompt('Nhập vào giá trị b'));
+        let c = parseFloat(prompt('Nhập vào giá trị c'));
+        let delta = b * b - 4 * a * c;
+        let x1;
+        let x2;
+        if (delta < 0){
+            alert('Phương trình vô nghiệm')
+        } else if (delta == 0){
+            x1 = x2 = -b / (2 * a)
+            alert('Phương trình có nghiệm kép x1 = x2 = ' + x1)
+        } else {
+            x1 = (-b - Math.sqrt(delta)) / (2 * a)
+            x2 = (-b + Math.sqrt(delta)) / (2 * a)
+            alert('Phương trình có 2 nghiệm x1 = ' + x1 + ' và x2 = ' + x2)
+        }
+    </script>
+</body>
+</html>

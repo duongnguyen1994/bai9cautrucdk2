@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sotien = Number(prompt('Nhập số tiền vay'))
+        const m = Number(prompt('Nhập số tháng cho vay'))
+        const lai = parseFloat(prompt('Nhập lãi suất hàng tháng'))
+        let a = 1 + lai
+        if (m < 0){
+            alert('Error')
+        } else {
+            let sum = (sotien * Math.pow(a, Math.ceil(m))).toFixed(2)
+            alert('Số tiền phải trả sau ' + m + ' tháng là: ' + sum)
+        }
+    </script>) 
+</body>
+</html>

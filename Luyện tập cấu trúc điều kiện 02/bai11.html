@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Đến 5 triệu 5%
+    Trên 5 triệu đến 10 triệu 10%
+    Trên 10 triệu đến 18 triệu 15%
+    Trên 18 triệu đến 32 triệu 20%
+    Trên 32 triệu đến 52 triệu 25%
+    Trên 52 triệu đến 80 triệu 30%
+    Trên 80 triệu 35%-->
+    <script>
+        let tongthunhap = parseFloat(prompt('Nhập tổng thu nhập tháng này'))
+        let phucap = parseFloat(prompt('Nhập số tiền phụ cấp ăn uống'))
+        const giamtru = 11000000
+        let phanchiuthue = tongthunhap - phucap - giamtru
+        if (phanchiuthue <= 0){
+            alert('Không cần phải nộp thuế')
+        } else if (phanchiuthue <= 5000000){
+            alert('Thuế phải nộp là: ' + phanchiuthue * 0.05)
+        } else if (phanchiuthue <= 10000000){
+            alert('Thuế phải nộp là: ' + phanchiuthue * 0.1 - 250000)
+        } else if (phanchiuthue <= 18000000){
+            alert('Thuế phải nộp là: ' + phanchiuthue * 0.15 - 750000)
+        } else if (phanchiuthue <= 32000000){
+            alert('Thuế phải nộp là: ' + phanchiuthue * 0.2 - 1650000)
+        } else if (phanchiuthue <= 52000000){
+            alert('Thuế phải nộp là: ' + phanchiuthue * 0.25 - 3250000)
+        } else if (phanchiuthue <= 80000000){
+            alert('Thuế phải nộp là: ' + phanchiuthue * 0.3 - 5850000)
+        } else alert('Thuế phải nộp là: ' + phanchiuthue * 0.35 - 9850000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển từ mét sang feet</title>
+</head>
+<body>
+    <script>
+        // ft = m * 3.2808
+        let m = parseFloat(prompt('Nhập chiều dài tính theo đơn vị mét'))
+        let ft = m * 3.2808
+        if (ft < 0){
+            alert('invalid')
+        } else if (ft == 1){
+            alert(ft + 'foot')
+        } else alert(ft + 'feet')
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 10</title>
+</head>
+<body>
+    <!--Tính giá điện sinh hoạt
+    Bậc 1: Cho kWh từ 0 - 50: 1.678 đồng
+    Bậc 2: Cho kWh từ 51 - 100: 1.734 đồng
+    Bậc 3: Cho kWh từ 101 - 200: 2.014 đồng
+    Bậc 4: Cho kWh từ 201 - 300: 2.536 đồng
+    Bậc 5: Cho kWh từ 301 - 400: 2.834 đồng
+    Bậc 6: Cho kWh từ 401 trở lên: 2.927 đồng-->
+    <script>
+        let so = Number(prompt('Nhập số chữ đã dùng tháng vừa rồi'));
+        let gia;
+        if (so < 0){
+            alert('invalid')
+        } else if (so > 0 && so <= 50){
+            gia = so * 1678
+            alert(gia)
+        } else if (so > 50 && so <=100){
+            gia = 50 * 1678 + (so - 50) * 1734
+            alert(gia)
+        } else if (so > 100 && so <= 200){
+            gia = 50 * 1678 + 50 * 1734 + (so - 100) * 2014
+            alert(gia)
+        } else if (so > 200 && so <= 300){
+            gia = 50 * 1678 + 50 * 1734 + 100 * 2014 + (so - 200) * 2536
+            alert(gia)
+        } else if (so > 300 && so <=400){
+            gia = 50 * 1678 + 50 * 1734 + 100 * 2014 + 100 * 2536 + (so - 300) * 2834
+            alert(gia)
+        } else {
+            gia = 50 * 1678 + 50 * 1734 + 100 * 2014 + 100 * 2536 + 100 * 2834 + (so - 400) * 2927
+            alert(gia)
+        } 
+    </script>
+</body>
+</html>
